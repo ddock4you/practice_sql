@@ -21,6 +21,13 @@ INSERT INTO tCity
 VALUES ('춘천', 1116, 27, 'n', '강원');
 INSERT INTO tCity
 VALUES ('홍천', 1819, 7, 'n', '강원');
+INSERT INTO tcity
+VALUES ('평택', 453, 51, 'n', '경기');
+INSERT INTO tcity (name, area, popu, metro, region)
+VALUES ('용인', 293, 98, 'n', '경기');
+INSERT INTO tcity (name, area, popu, metro, region)
+VALUES ('이천', 461, 21, 'n', '경기'),
+    ('영월', 1127, 4, 'n', '강원');
 CREATE TABLE tStaff (
     name CHAR (15) PRIMARY KEY,
     depart CHAR (10) NOT NULL,
@@ -70,3 +77,13 @@ INSERT INTO tStaff
 VALUES ('장보고', '인사과', '남', '2005-4-1', '부장', 440, 58.3);
 INSERT INTO tStaff
 VALUES ('선덕여왕', '인사과', '여', '2017-8-3', '사원', 315, 45.1);
+INSERT INTO tstaff (
+        name,
+        depart,
+        gender,
+        joindate,
+        grade,
+        salary,
+        score
+    )
+VALUES ('윤승현', '총무부', '남', 20210519, '대리', 360, 98);
