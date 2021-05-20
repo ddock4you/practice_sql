@@ -131,8 +131,7 @@ CREATE TABLE tItem (
     CONSTRAINT item_fk FOREIGN KEY(category) REFERENCES tCategory(category)
 );
 -- 상품 데이터
-INSERT INTO tItem (item, company, num, price, category)
-VALUES ('노트북', '샘성', 3, 820000, '가전');
+INSERT INTO tItem (item, company, num, price, category) VALUES ('노트북', '샘성', 3, 820000, '가전');
 INSERT INTO tItem (item, company, num, price, category)
 VALUES ('청바지', '방방', 80, 32000, '패션');
 INSERT INTO tItem (item, company, num, price, category)
@@ -181,7 +180,7 @@ MSSQL: CREATE TABLE tOrder (
     -- 주문자
     item VARCHAR(20) NOT NULL,
     -- 상품
-    orderDate DATE DEFAULT CURDATE() NOT NULL,
+    orderDate DATE DEFAULT (CURDATE()) NOT NULL,
     -- 주문 날자
     num INT NOT NULL,
     -- 개수
